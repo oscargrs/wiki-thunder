@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #1F1F1F;
+    background-color: #141710;
     padding: 20px;
 }
 
@@ -12,15 +12,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #B61C1C;
+    background-color: #a63225;
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
     font-size: large;
+    border: 1px solid #d04030;
+    color: white;
 }
 
-.alistar-redirect {
-    color: white;
+.alistar-redirect:hover {
+    background-color: #d04030;
 }
 
 
@@ -32,16 +34,18 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #2B2B2B;
+    background-color: #1a1e14;
     color: white;
     gap: 10px;
     padding: 5px;
+    border: 1px solid #2e3424;
 }
 
 .vehicles-title {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: larger;
     width: 60%;
 }
 
@@ -49,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #363636;
+    background-color: #2e3424;
     padding: 10px;
     color: white;
     width: 100%;
@@ -57,7 +61,7 @@
 }
 
 .vehicles-redirect:hover {
-    background-color: #424242;
+    background-color: #7d9048;
 }
 
 
@@ -72,16 +76,18 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 12%;
-    background-color: #313131;
+    width: 225px;
+    background-color: #141710;
     color: white;
     padding: 10px;
     padding-top: 20px;
+    border: 1px solid #2e3424;
+    border-top: 0px;
+    gap: 10px;
 }
 
 .nations-title {
     display: flex;
-    font-size: larger;
 }
 
 .nation-button {
@@ -93,8 +99,9 @@
     width: 90%;
     gap: 10px;
     padding: 10px;
+    background-color: #1a1e14;
 }
 
 .nation-button:hover {
-    background-color: #424242;
+    background-color: #2e3424;
 }

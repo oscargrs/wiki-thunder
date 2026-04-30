@@ -1,48 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #353535;
+    background-color: #0d0f0a;
 }
 
 main {
     display: flex;
     flex-direction: column;
-}
-
-/* NAVIGATION BAR ----------------------------- */
-
-.navigation-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #2B2B2B;
-    color: white;
-    gap: 10px;
-    padding: 5px;
-}
-
-.vehicles-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-}
-
-.vehicles-redirect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #363636;
-    padding: 10px;
-    color: white;
-    width: 100%;
-    border-radius: 2px;
-}
-
-.vehicles-redirect:hover {
-    background-color: #424242;
 }
 
 
@@ -67,13 +31,13 @@ main {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 6px;
-    color: #B61C1C;
+    color: #d04030;
     margin: 0 0 8px 0;
 }
 
 .wiki-subtitle {
     font-size: 14px;
-    color: #aaaaaa;
+    color: #c8a84b;
     margin: 0 0 30px 0;
     letter-spacing: 1px;
 }
@@ -88,8 +52,8 @@ main {
 #ipt_search {
     flex: 1;
     padding: 12px 16px;
-    background-color: #3a3a3a;
-    border: 1px solid #4b4b4b;
+    background-color: #1a1e14;
+    border: 1px solid #2e3424;
     border-right: none;
     color: white;
     font-size: 14px;
@@ -98,17 +62,17 @@ main {
 }
 
 #ipt_search::placeholder {
-    color: #777;
+    color: #d4cdb8;
 }
 
 #ipt_search:focus {
-    border-color: #B61C1C;
-    background-color: #3f3f3f;
+    border-color: #d04030;
+    background-color: #2e3424;
 }
 
 .search-btn {
     padding: 12px 24px;
-    background-color: #B61C1C;
+    background-color: #a63225;
     border: none;
     color: white;
     font-weight: bold;
@@ -116,10 +80,11 @@ main {
     letter-spacing: 1px;
     cursor: pointer;
     border-radius: 0 2px 2px 0;
+    border: 1px solid #d04030;
 }
 
 .search-btn:hover {
-    background-color: #B61C1C;
+    background-color: #d04030;
 }
 
 /* ABOUT SECTION ----------------------------- */
@@ -134,8 +99,8 @@ main {
 .about-card {
     display: flex;
     flex-direction: column;
-    background-color: #2B2B2B;
-    border-left: 3px solid #B61C1C;
+    background-color: #1a1e14;
+    border-left: 3px solid #a63225;
     padding: 20px;
     gap: 12px;
     border-radius: 2px;
@@ -145,12 +110,12 @@ main {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #B61C1C;
+    color: #d04030;
 }
 
 .about-card-text {
     font-size: 13px;
-    color: #bbbbbb;
+    color: #d4cdb8;
     line-height: 1.7;
     margin: 0;
 }
