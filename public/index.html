@@ -1,82 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Página Inicial</title>
-
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>WikiThunder</title>
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
-
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+    <header>
+        <div class="header-content">
+            <a class="logo-redirect" href="./index.html">
+                <img class="logo-img" src="./src/img/icons/logo_warthunder.png" alt="" height="50px">
+            </a>
+            <a class="alistar-redirect" href="./register.html">
+               <div class="alistar-box">
+                    <span class="alistar-span">ALISTAR-SE</span>
+               </div> 
+            </a>
         </div>
-      </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
-    </div>
-  </body>
-
+        <div class="navigation-bar">
+            <span class="vehicles-title">VEÍCULOS:</span>
+            <a class="vehicles-redirect" href="./pages/vehicles/aviacao.html">
+                <span class="vehicles-span">AVIAÇÃO</span>
+            </a>
+            <a class="vehicles-redirect" href="./pages/vehicles/helicopteros.html">
+                <span class="vehicles-span">HELICÓPTEROS</span>
+            </a>
+            <a class="vehicles-redirect" href="./pages/vehicles/terrestres.html">
+                <span class="vehicles-span">VEÍCULOS TERRESTRES</span>
+            </a>
+            <a class="vehicles-redirect" href="./pages/vehicles/marinha.html">
+                <span class="vehicles-span">MARINHA</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="side-menu">
+                <a class="nation-button" href="./pages/nations/eua.html">
+                    <img class="" src="./src/img/flags/eua-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">EUA</span>
+                </a>
+                <a id="nation-button" class="nation-button" href="./pages/nations/germany.html">
+                    <img class="" src="./src/img/flags/germany-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">ALEMANHA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/urss.html">
+                    <img class="" src="./src/img/flags/urss-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">URSS</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/united-kingdom.html">
+                    <img class="" src="./src/img/flags/united_kingdom-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">GRÃ-BRETANHA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/japan.html">
+                    <img class="" src="./src/img/flags/japan-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">JAPÃO</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/china.html">
+                    <img class="" src="./src/img/flags/china-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">CHINA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/italy.html">
+                    <img class="" src="./src/img/flags/italy-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">ITÁLIA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/france.html">
+                    <img class="" src="./src/img/flags/france-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">FRANÇA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/sweden.html">
+                    <img class="" src="./src/img/flags/sweden-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">SUÉCIA</span>
+                </a>
+                <a class="nation-button" href="./pages/nations/israel.html">
+                    <img class="" src="./src/img/flags/israel-flag.png" alt="" height="28px" width="42px">
+                    <span class="nation-title">ISRAEL</span>
+                </a>
+            </div>
+            <div class="body-content">
+                <div class="search-section">
+                    <h1 class="wiki-title">Wiki<span style="color: #c8a84b;">Thunder</span></h1>
+                    <p class="wiki-subtitle">A enciclopédia da comunidade sobre veículos de War Thunder.</p>
+                    <div class="search-bar-wrapper">
+                        <input type="text" id="ipt_search" class="search-input" placeholder="Buscar veículo...">
+                        <button class="search-btn">BUSCAR</button>
+                    </div>
+                </div>
+                <div class="about-section">
+                    <div class="about-card">
+                        <span class="about-card-title">O QUE É WAR THUNDER?</span>
+                        <p class="about-card-text">
+                            War Thunder é um MMO de combate multi-plataforma desenvolvido pela Gaijin Entertainment. 
+                            O jogo abrange aviação militar, blindados e forças navais de vários países ao longo de diversas eras de conflitos, 
+                            desde a Segunda Guerra Mundial até conflitos modernos.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-title">MAIS DE 2.000 VEÍCULOS</span>
+                        <p class="about-card-text">
+                            Com um dos maiores arsenais de qualquer jogo de combate, War Thunder conta com aeronaves, 
+                            tanques, navios e helicópteros de nações como EUA, URSS, Alemanha, Grã-Bretanha, Japão e muito mais.
+                            Cada veículo é modelado com base em documentos históricos reais.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-title">COMO USAR O WIKI</span>
+                        <p class="about-card-text">
+                            Selecione uma nação no menu lateral, escolha a categoria de veículo na barra de navegação 
+                            e explore as fichas completas com estatísticas, história e avaliações da comunidade.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-title">SISTEMA DE BATTLE RATING</span>
+                        <p class="about-card-text">
+                            O Battle Rating (BR) determina em quais batalhas cada veículo pode participar. 
+                            Vai de 1.0 até 13.0, onde veículos com BR similar se enfrentam para garantir partidas equilibradas.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-title">MODOS DE JOGO</span>
+                        <p class="about-card-text">
+                            War Thunder oferece três modos principais: Arcade Battles, com física simplificada e mais ação; 
+                            Realistic Battles, com danos e física mais fiéis; e Simulator Battles, 
+                            o modo mais imersivo com cockpit obrigatório e comunicação limitada.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-title">PESQUISA E PROGRESSÃO</span>
+                        <p class="about-card-text">
+                            Cada nação possui uma árvore tecnológica dividida por tipo de veículo e era histórica. 
+                            O progresso é feito com Silver Lions e Research Points ganhos em batalha, 
+                            desbloqueando gradualmente veículos mais avançados e modernos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!--blaoavawfadfwpoi-->
+    </footer>
+</body>
 </html>
