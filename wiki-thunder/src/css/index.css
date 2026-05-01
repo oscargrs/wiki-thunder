@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #0d0f0a;
+    background-image: url('../img/background.jpg');
 }
 
 main {
