@@ -12,7 +12,7 @@
     <header>
         <div class="header-content">
             <a class="logo-redirect" href="./index.html">
-                <img class="logo-img" src="./src/img/icons/logo_warthunder.png" alt="" height="50px">
+                <img class="logo-img" src="./src/img/icons/logo-wt.png" alt="" height="50px">
             </a>
             <a class="alistar-redirect" href="./register.html">
                <div class="alistar-box">
@@ -28,8 +28,8 @@
             <a class="vehicles-redirect" href="./pages/vehicles/helicopteros.html">
                 <span class="vehicles-span">HELICÓPTEROS</span>
             </a>
-            <a class="vehicles-redirect" href="./pages/vehicles/terrestres.html">
-                <span class="vehicles-span">VEÍCULOS TERRESTRES</span>
+            <a class="vehicles-redirect" href="./pages/vehicles/exercito.html">
+                <span class="vehicles-span">EXÉRCITO</span>
             </a>
             <a class="vehicles-redirect" href="./pages/vehicles/marinha.html">
                 <span class="vehicles-span">MARINHA</span>
@@ -102,19 +102,6 @@
     <footer>
         <!--blaoavawfadfwpoi-->
     </footer>
-    <script>
-        let nacoes = ["EUA", "Alemanha", "URSS", "Grã-Bretanha", "Japão", "China", "Itália", "França", "Suécia", "Israel"];
-        let bandeiras = ["eua-flag.png", "germany-flag.png", "urss-flag.png", "united_kingdom-flag.png", "japan-flag.png", "china-flag.png", "italy-flag.png", "france-flag.png", "sweden-flag.png", "israel-flag.png"];
-        let links = ["eua.html", "germany.html", "united-kingdom.html", "japan.html", "china.html", "italy.html", "france.html", "sweden.html", "israel.html"];
-        
-        for (let i = 0; i < nacoes.length; i++) {
-            side_menu.innerHTML += `
-                <a class="nation-button" href="./pages/nations/${links[i]}">
-                    <img src="./src/img/flags/${bandeiras[i]}" height="28px" width="42px">
-                    <span class="nation-title">${nacoes[i]}</span>
-                </a>
-            `;
-        }
-    </script>
+    <script src="./src/js/nations.js" onload="index()"></script>
 </body>
 </html>

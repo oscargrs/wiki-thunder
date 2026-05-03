@@ -6,15 +6,15 @@
     <title>URSS - WikiThunder</title>
     <link rel="stylesheet" href="../../src/css/global.css">
     <link rel="stylesheet" href="../../src/css/header.css">
-    <link rel="stylesheet" href="../../src/css/urss.css">
+    <link rel="stylesheet" href="../../src/css/nations-style/urss.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <a class="logo-redirect" href="../../index.html">
-                <img class="logo-img" src="../../src/img/icons/logo_warthunder.png" alt="" height="50px">
+                <img class="logo-img" src="../../src/img/icons/logo-wt.png" alt="" height="50px">
             </a>
-            <a class="alistar-redirect" href="">
+            <a class="alistar-redirect" href="../../register.html">
                <div class="alistar-box">
                     <span class="alistar-span">ALISTAR-SE</span>
                </div> 
@@ -28,8 +28,8 @@
             <a class="vehicles-redirect" href="../vehicles/helicopteros.html">
                 <span class="vehicles-span">HELICÓPTEROS</span>
             </a>
-            <a class="vehicles-redirect" href="../vehicles/terrestres.html">
-                <span class="vehicles-span">VEÍCULOS TERRESTRES</span>
+            <a class="vehicles-redirect" href="../vehicles/exercito.html">
+                <span class="vehicles-span">EXÉRCITO</span>
             </a>
             <a class="vehicles-redirect" href="../vehicles/marinha.html">
                 <span class="vehicles-span">MARINHA</span>
@@ -38,53 +38,12 @@
     </header>
     <main>
         <div class="main-content">
-            <div class="side-menu">
-                <span class="nations-title">NAÇÕES:</span>
-                <a class="nation-button" href="../nations/eua.html">
-                    <img class="" src="./src/img/flags/eua-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">EUA</span>
-                </a>
-                <a id="nation-button" class="nation-button" href="../nations/index.html">
-                    <img class="" src="./src/img/flags/germany-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">ALEMANHA</span>
-                </a>
-                <a class="nation-button" href="../nations/urss.html">
-                    <img class="" src="./src/img/flags/urss-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">URSS</span>
-                </a>
-                <a class="nation-button" href="../nations/united-kingdom.html">
-                    <img class="" src="./src/img/flags/united_kingdom-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">GRÃ-BRETANHA</span>
-                </a>
-                <a class="nation-button" href="../nations/japan.html">
-                    <img class="" src="./src/img/flags/japan-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">JAPÃO</span>
-                </a>
-                <a class="nation-button" href="../nations/china.html">
-                    <img class="" src="./src/img/flags/china-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">CHINA</span>
-                </a>
-                <a class="nation-button" href="../nations/italy.html">
-                    <img class="" src="./src/img/flags/italy-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">ITÁLIA</span>
-                </a>
-                <a class="nation-button" href="../nations/france.html">
-                    <img class="" src="./src/img/flags/france-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">FRANÇA</span>
-                </a>
-                <a class="nation-button" href="../nations/sweden.html">
-                    <img class="" src="./src/img/flags/sweden-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">SUÉCIA</span>
-                </a>
-                <a class="nation-button" href="../nations/israel.html">
-                    <img class="" src="./src/img/flags/israel-flag.png" alt="" height="28px" width="42px">
-                    <span class="nation-title">ISRAEL</span>
-                </a>
-            </div>
+            <div class="side-menu" id="side_menu"></div>
         </div>
     </main>
     <footer>
         
     </footer>
+    <script src="../../src/js/nations.js" onload="pages()"></script>
 </body>
 </html>

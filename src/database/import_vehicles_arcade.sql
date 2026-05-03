@@ -1,8 +1,4 @@
--- ============================================
--- War Thunder Vehicles - Import (3171 veículos)
--- ============================================
-
-create table if not exists vehicles (
+create table vehiclesArcade (
     id           int          auto_increment,
     identifier   varchar(100),
     country      varchar(50),
