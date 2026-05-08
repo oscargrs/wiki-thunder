@@ -36,26 +36,52 @@
                     <div class="card card-cadastro">
                         <h2>Recruta, seu chamado chegou. Aliste-se.</h2>
                         <div class="formulario">
-                        <!--
-                        Para inserir mais um campo, copie uma das inputs abaixo.
-                        Assim que inserir vá para o script abaixo.
-                        -->
-                        <div class="campo">
-                            <span>Nome de guerra:</span>
-                            <input id="nome_input" type="text" placeholder="Seu nome" />
-                        </div>
-                        <div class="campo">
-                            <span>E-mail de acesso:</span>
-                            <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
-                        </div>
-                        <div class="campo">
-                            <span>Senha de acesso:</span>
-                            <input id="senha_input" type="password" placeholder="******" />
-                        </div>
-                        <div class="campo">
-                            <span>Confirmar senha:</span>
-                            <input id="confirmacao_senha_input" type="password" placeholder="******" />
-                        </div>
+                            <!--
+                            Para inserir mais um campo, copie uma das inputs abaixo.
+                            Assim que inserir vá para o script abaixo.
+                            -->
+                            <div class="campo">
+                                <span>Nome de guerra:</span>
+                                <input id="nome_input" type="text" placeholder="nickname" />
+                            </div>
+                            <div class="campo">
+                                <span>E-mail de acesso:</span>
+                                <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
+                            </div>
+                            <div class="campo">
+                                <span>Senha de acesso:</span>
+                                <input id="senha_input" type="password" placeholder="******" />
+                            </div>
+                            <div class="campo">
+                                <span>Confirmar senha:</span>
+                                <input id="confirmacao_senha_input" type="password" placeholder="******" />
+                            </div>
+                            <div class="campo">
+                                <span>Nação principal:</span>
+                                <select id="nacao_input">
+                                    <option value="">Selecione sua nação</option>
+                                    <option value="usa">🇺🇸 Estados Unidos</option>
+                                    <option value="germany">🇩🇪 Alemanha</option>
+                                    <option value="ussr">🇷🇺 URSS</option>
+                                    <option value="britain">🇬🇧 Grã-Bretanha</option>
+                                    <option value="japan">🇯🇵 Japão</option>
+                                    <option value="china">🇨🇳 China</option>
+                                    <option value="italy">🇮🇹 Itália</option>
+                                    <option value="france">🇫🇷 França</option>
+                                    <option value="sweden">🇸🇪 Suécia</option>
+                                    <option value="israel">🇮🇱 Israel</option>
+                                </select>                        
+                            </div>
+                            <div class="campo">
+                                <span>Especialização de combate:</span>
+                                <select id="gameplay_input">
+                                    <option value="">Selecione sua especialização</option>
+                                    <option value="airplanes">Aviação</option>
+                                    <option value="helicopters">Helicópteros</option>
+                                    <option value="army">Exército</option>
+                                    <option value="navy">Marinha</option>
+                                </select>
+                            </div>
                             <button class="botao" onclick="cadastrar()">Alistar-se</button>
                         </div>
                         <div id="div_aguardar" class="loading-div">

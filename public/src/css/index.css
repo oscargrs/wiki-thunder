@@ -17,6 +17,15 @@ main {
     flex-direction: column;
     flex: 1;
     color: white;
+    
+    min-height: 100vh;
+    background-image: url('../img/backgrounds/index_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
 }
 
 .search-section {

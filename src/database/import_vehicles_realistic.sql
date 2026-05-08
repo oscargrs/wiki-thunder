@@ -1,13 +1,3 @@
-create table vehicles (
-    id           int          auto_increment,
-    identifier   varchar(100),
-    country      varchar(50),
-    vehicle_type varchar(50),
-    realistic_br  decimal(4,1),
-    image_url    varchar(300),
-    constraint pk_vehicles primary key (id)
-);
-
 insert into vehicles (identifier, country, vehicle_type, realistic_br, image_url) values ('a-20g', 'usa', 'assault', 2.7, 'https://wtvehiclesapi.duckdns.org/assets/images/a-20g.png');
 insert into vehicles (identifier, country, vehicle_type, realistic_br, image_url) values ('a-26b', 'usa', 'assault', 5.3, 'https://wtvehiclesapi.duckdns.org/assets/images/a-26b.png');
 insert into vehicles (identifier, country, vehicle_type, realistic_br, image_url) values ('a-26b_10', 'usa', 'assault', 5, 'https://wtvehiclesapi.duckdns.org/assets/images/a-26b_10.png');

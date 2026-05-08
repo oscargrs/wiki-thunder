@@ -1,5 +1,3 @@
-// Array para armazenar empresas cadastradas para validação de código de ativação 
-let listaEmpresasCadastradas = [];
 function cadastrar() {
   // aguardar();
   //Recupere o valor da nova input pelo nome do id
@@ -8,15 +6,16 @@ function cadastrar() {
   var emailVar = email_input.value;
   var senhaVar = senha_input.value;
   var confirmacaoSenhaVar = confirmacao_senha_input.value;
-  var codigoVar = codigo_input.value;
-  var idEmpresaVincular
+  var nacaoVar = nacao_input.value;
+  var gameplayVar = gameplay_input.value;
   // Verificando se há algum campo em branco
   if (
     nomeVar == "" ||
     emailVar == "" ||
     senhaVar == "" ||
     confirmacaoSenhaVar == "" ||
-    codigoVar == ""
+    nacaoVar == "" ||
+    gameplayVar == ""
   ) {
     cardErro.style.display = "block";
     mensagem_erro.innerHTML =
@@ -25,18 +24,6 @@ function cadastrar() {
     return false;
   } else {
     setInterval(sumirMensagem, 5000);
-  }
-  // Verificando se o código de ativação é de alguma empresa cadastrada
-  for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-    if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-      idEmpresaVincular = listaEmpresasCadastradas[i].id
-      console.log("Código de ativação válido.");
-      break;
-    } else {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-      finalizarAguardar();
-    }
   }
   // Enviando o valor da nova input
   fetch("/usuarios/cadastrar", {
@@ -50,7 +37,8 @@ function cadastrar() {
       nomeServer: nomeVar,
       emailServer: emailVar,
       senhaServer: senhaVar,
-      idEmpresaVincularServer: idEmpresaVincular
+      nacaoServer: nacaoVar,
+      gameplayServer: gameplayVar
     }),
   })
     .then(function (resposta) {
@@ -73,4 +61,8 @@ function cadastrar() {
       finalizarAguardar();
     });
   return false;
+}
+
+function sumirMensagem() {
+  cardErro.style.display = "none";
 }
