@@ -32,9 +32,8 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
-                sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
                 setTimeout(function () {
-                    window.location = "./dashboard/cards.html";
+                    window.location = "../../dashboard/dash.html";
                 }, 1000); // apenas para exibir o loading
             });
         } else {

@@ -1,7 +1,17 @@
-body {
+body.login {
     display: flex;
     flex-direction: column;
-    background-color: #0d0f0a;
+    height: 100vh;
+    overflow-y: hidden;
+    background-image: url(../img/backgrounds/login_background.png);
+}
+
+body.register {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+    background-image: url(../img/backgrounds/register_background.png);
 }
 
 main {
@@ -9,21 +19,20 @@ main {
     flex-direction: column;
 }
 
-.main-content {
+main, .main-content {
     display: flex;
+    height: 100%;
 }
 
 .login {
     height: 100%;
     width: 100%;
-    background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
     background-size: cover;
 }
 
 .register {
     height: 100%;
     width: 100%;
-    background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
     background-size: cover;
 }
 
@@ -31,20 +40,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 85%;
 }
 
 .card {
     width: 50%;
-    background-color: #e5e5e5;
+    background-color: #1a1e14;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: palevioletred;
+    color: white;
     flex-direction: column;
     height: fit-content;
     width: fit-content;
-    padding: 20px 0;
+    padding: 40px;
+    gap: 30px;
+    border: 1px solid #2e3424;
 }
 
 .card h2 {
@@ -54,31 +66,40 @@ main {
 
 .formulario {
     display: flex;
-    height: 90%;
-    width: 80%;
+    height: 100%;
+    width: 90%;
+    gap: 10px;
     justify-content: space-around;
     flex-direction: column;
 }
 
 .formulario span {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 .formulario input {
-    border: 2px solid #32b9cd;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0;
+    border: 1px solid #7d9048;
+    background-color: #2e3424;
+    color: white;
+    text-align: left;
+    border-radius: 7px;
+    margin: 0px;
+    height: 25px;
+    padding: 4px;
+}
+
+.formulario ::placeholder {
+    color: rgb(180, 180, 180);
 }
 
 .formulario select {
-    border: 2px solid #32b9cd;
-    background-color: white;
-    color: gray;
-    height: 36px;
+    border: 1px solid #7d9048;
+    background-color: #2e3424;
+    color: white;
+    height: 30px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 0;
 }
 
@@ -92,16 +113,20 @@ main {
 .botao {
     cursor: pointer;
     font-family: "Barlow", sans-serif;
-    border: 0;
+    border: 1px solid #d04030;
     border-radius: 5px;
     font-weight: 600;
     font-size: 18px;
     color: #fff;
-    background-color: #ed145b;
-    width: 120px;
-    height: 30px;
+    background-color: #a63225;
+    width: 200px;
+    height: 50px;
     align-self: center;
     margin-top: 20px;
+}
+
+.botao:hover {
+    background-color: #d04030;
 }
 
 .loading-div {

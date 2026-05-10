@@ -21,3 +21,12 @@ Vermelho "To Battle!" - #92191B - Botões principais ou alertas. É o vermelho c
 Dourado Premium (Golden Eagles) - #F9DB78 - Destacar veículos Premium, nomes de pacotes especiais ou títulos importantes. É o código exato lido pelos arquivos do jogo para colorir a fonte dos premiums.
 Azul de Aliado / Fabricante - #81C3FC - Links ou textos secundários de destaque. No jogo, é o azul claro usado nas marcações de aliados no céu/terra e nas linhas de fabricante dentro da Statcard.
 Verde Esquadrão - #5CAE63 - Informações positivas (como blindagem impenetrável ou buff em atualizações). É a cor do nome do seu parceiro de esquadrão (squadmate) na partida.
+
+#2e3424
+#7d9048
+#141710
+#2e3424
+#1a1e14
+#0d0f0a
+#a63225
+#d04030
