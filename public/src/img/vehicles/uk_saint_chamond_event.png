@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-11T02:10:16.615Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "uk_saint_chamond_event.png"
+    ]
+  }
+}

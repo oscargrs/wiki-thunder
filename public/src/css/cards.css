@@ -1,0 +1,32 @@
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.vehicle-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 15%;
+    height: fit-content;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.vehicle-img {
+    margin: 0;
+    width: 100%;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
