@@ -12,21 +12,43 @@
     border-radius: 5px;
     width: 15%;
     height: fit-content;
+    overflow: hidden;
 }
 
 .card-title {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    background-color: #1a1e14;
+    color: white;
 }
 
 .vehicle-img {
-    margin: 0;
+    display: block;
     width: 100%;
+    background-color: #2e3424;
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    background-color: #1a1e14;
+    color: white;
+}
+
+.identifier {
+    font-weight: 600;
+}
+
+.country {
+    font-weight: 500;
+}
+
+.br {
+    color: #d04030;
+}
+
+.type {
+    font-weight: 400;
 }
