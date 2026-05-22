@@ -1,4 +1,3 @@
-// ─── SESSÃO ──────────────────────────────────────────────
 function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome  = sessionStorage.NOME_USUARIO;
@@ -16,7 +15,6 @@ function limparSessao() {
     window.location = "../../login.html";
 }
 
-// ─── SIDE MENU ────────────────────────────────────────────
 function carregarMenu() {
     var nacoes    = ["EUA","Alemanha","URSS","Grã-Bretanha","Japão","China","Itália","França","Suécia","Israel"];
     var bandeiras = ["eua-flag.png","germany-flag.png","urss-flag.png","united_kingdom-flag.png","japan-flag.png","china-flag.png","italy-flag.png","france-flag.png","sweden-flag.png","israel-flag.png"];
@@ -31,7 +29,6 @@ function carregarMenu() {
     }
 }
 
-// ─── TABS ─────────────────────────────────────────────────
 function switchTab(id, btn) {
     document.querySelectorAll(".tab-panel").forEach(function(p) { p.classList.remove("active"); });
     document.querySelectorAll(".tab-btn").forEach(function(b)   { b.classList.remove("active"); });
