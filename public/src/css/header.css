@@ -19,10 +19,17 @@
     font-size: large;
     border: 1px solid #d04030;
     color: white;
+    width: 120px;
 }
 
 .alistar-redirect:hover {
     background-color: #d04030;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 

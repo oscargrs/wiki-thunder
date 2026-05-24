@@ -33,7 +33,7 @@ function entrar() {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
                 setTimeout(function () {
-                    window.location = "../../dashboard/dash.html";
+                    window.location = "../../dashboard/dash-visao-geral.html";
                 }, 1000); // apenas para exibir o loading
             });
         } else {
