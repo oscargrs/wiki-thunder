@@ -8,7 +8,7 @@ function exibirVeiculos(veiculos) {
         let pais = veiculo.country;
         paisF = pais.charAt(0).toUpperCase() + pais.slice(1);
         let tipo = veiculo.vehicle_type;
-        tipoF = textoFormatado = tipo.charAt(0).toUpperCase() + tipo.slice(1).replaceAll('_', ' ');
+        tipoF = tipo.charAt(0).toUpperCase() + tipo.slice(1).replaceAll('_', ' ');
         let identifier = veiculo.identifier;
         identifierF = identifier.charAt(0).toUpperCase() + identifier.slice(1).replaceAll('_', '-');
         cards.innerHTML += `
@@ -18,7 +18,7 @@ function exibirVeiculos(veiculos) {
                     <span class="country">${paisF}</span>
                 </div>
                 <div class="card-img">
-                    <img class="vehicle-img" src="../../src/img/vehicles/${veiculo.identifier}.png" alt="">
+                    <img class="vehicle-img" src="../../assets/img/vehicles/${veiculo.identifier}.png" alt="">
                 </div>
                 <div class="card-footer">
                     <span class="type">${tipoF}</span>

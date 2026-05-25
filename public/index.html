@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiThunder</title>
-    <link rel="stylesheet" href="./src/css/global.css">
-    <link rel="stylesheet" href="./src/css/header.css">
-    <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="stylesheet" href="../../src/css/cards.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/cards.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <a class="logo-redirect" href="./index.html">
-                <img class="logo-img" src="./src/img/icons/logo-wt.png" alt="" height="50px">
+                <img class="logo-img" src="./assets/img/icons/logo-wt.png" alt="" height="50px">
             </a>
-            <a class="alistar-redirect" href="./register.html">
-               <div class="alistar-box">
-                    <span class="alistar-span">ALISTAR-SE</span>
-               </div> 
+            <a class="alistar-redirect" href="./register.html" id="alistarRedirect">
+                <div class="alistar-box">
+                    <span class="alistar-span" id="alistarSpan">ALISTAR-SE</span>
+                </div> 
             </a>
         </div>
         <div class="navigation-bar">
@@ -40,7 +40,7 @@
     <main>
         <div class="main-content">
             <div class="side-menu" id="side_menu"></div>
-            <div class="body-content">
+            <div class="content">
                 <div class="search-section">
                     <h1 class="wiki-title">Wiki<span style="color: #c8a84b;">Thunder</span></h1>
                     <p class="wiki-subtitle">A enciclopédia da comunidade sobre veículos de War Thunder.</p>
@@ -103,6 +103,9 @@
     <footer>
         <!--blaoavawfadfwpoi-->
     </footer>
-    <script src="./src/js/nations.js" onload="index()"></script>
+    <script src="./assets/js/nations.js"></script>
+    <script>index()</script>
+    <script src="./assets/js/pages.js"></script>
+    <script>validarSessao()</script>
 </body>
 </html>

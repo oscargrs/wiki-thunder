@@ -6,7 +6,7 @@ function index() {
     for (let i = 0; i < nacoes.length; i++) {
         side_menu.innerHTML += `
             <a class="nation-button" href="./pages/nations/${links[i]}">
-                <img src="./src/img/flags/${bandeiras[i]}" height="28px" width="42px">
+                <img src="./assets/img/flags/${bandeiras[i]}" height="28px" width="42px">
                 <span class="nation-title">${nacoes[i]}</span>
             </a>
         `;
@@ -21,7 +21,7 @@ function pages() {
     for (let i = 0; i < nacoes.length; i++) {
         side_menu.innerHTML += `
             <a class="nation-button" href="../../pages/nations/${links[i]}">
-                <img src="../../src/img/flags/${bandeiras[i]}" height="28px" width="42px">
+                <img src="../../assets/img/flags/${bandeiras[i]}" height="28px" width="42px">
                 <span class="nation-title">${nacoes[i]}</span>
             </a>
         `;

@@ -5,7 +5,6 @@ function validarSessao() {
     if (email != null && nome != null) {
         b_usuario.innerHTML = nome;
     } else {
-        // window.location = "../../login.html";
         b_usuario.innerHTML = "DEMO";
     }
 }
@@ -23,7 +22,7 @@ function carregarMenu() {
     menu.innerHTML = '<div class="side-section-label">Nações</div>';
     for (var i = 0; i < nacoes.length; i++) {
         menu.innerHTML += '<a class="nation-button" href="../../pages/nations/' + links[i] + '">' +
-            '<img src="../../src/img/flags/' + bandeiras[i] + '" height="28px" width="42px">' +
+            '<img src="../../assets/img/flags/' + bandeiras[i] + '" height="28px" width="42px">' +
             '<span>' + nacoes[i] + '</span>' +
         '</a>';
     }
