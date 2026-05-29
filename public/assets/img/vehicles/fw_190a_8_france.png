@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-29T22:45:35.916Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "fw-190a-8-france.png"
+    ]
+  }
+}

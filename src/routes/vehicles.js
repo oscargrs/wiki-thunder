@@ -15,4 +15,8 @@ router.get("/class/:classe", function (req, res) {
     vehiclesController.buscarPorClasse(req, res);
 })
 
+router.get("/name/:nome", function (req, res) {
+    vehiclesController.buscarPorNome(req, res);
+})
+
 module.exports = router;

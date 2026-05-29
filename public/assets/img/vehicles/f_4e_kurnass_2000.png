@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-29T22:45:20.528Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "f-4e-kurnass-2000.png"
+    ]
+  }
+}

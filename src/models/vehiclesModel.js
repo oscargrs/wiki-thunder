@@ -62,8 +62,16 @@ function buscarPorClasse(classe) {
     return database.executar(instrucaoSql);
 }
 
+function buscarPorNome(nome) {
+    var instrucaoSql = `SELECT * FROM vehicles WHERE identifier LIKE '%${nome}%';`
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     buscarVeiculos,
     buscarPorNacao,
-    buscarPorClasse
+    buscarPorClasse,
+    buscarPorNome
 }

@@ -42,8 +42,23 @@ function buscarPorClasse(req, res) {
         })
 }
 
+function buscarPorNome(req, res) {
+    var nome = req.params.nome;
+
+    vehiclesModel.buscarPorNome(nome)
+        .then(resultado => {
+            res.status(200).json(resultado);
+        })
+
+        .catch(erro => {
+            console.log(erro);
+            res.status(500).json(erro);
+        })
+}
+
 module.exports = {
     buscarVeiculos,
     buscarPorNacao,
-    buscarPorClasse
+    buscarPorClasse,
+    buscarPorNome
 }

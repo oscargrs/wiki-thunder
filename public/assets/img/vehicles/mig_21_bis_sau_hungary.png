@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-29T22:45:58.529Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "mig-21-bis-sau-hungary.png"
+    ]
+  }
+}

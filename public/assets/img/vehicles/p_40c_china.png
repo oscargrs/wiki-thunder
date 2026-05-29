@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-29T22:46:05.778Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "p-40c-china.png"
+    ]
+  }
+}

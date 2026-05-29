@@ -1,0 +1,13 @@
+{
+  "at": "2026-05-29T22:45:21.949Z",
+  "method": "GET",
+  "hostname": "wtvehiclesapi.duckdns.org",
+  "query": {},
+  "params": {
+    "unrouted": [
+      "assets",
+      "images",
+      "p-51b-7-sweden.png"
+    ]
+  }
+}
