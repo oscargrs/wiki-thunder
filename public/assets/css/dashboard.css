@@ -127,22 +127,3 @@ body {
     color: #7d9048;
     text-transform: uppercase;
 }
-
-
-/* USER INFO NO HEADER ----------------------------- */
-
-.user-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: #d4cdb8;
-}
-
-.user-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #7d9048;
-}

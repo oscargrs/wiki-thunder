@@ -17,11 +17,18 @@
             <a class="logo-redirect" href="./index.html">
                 <img class="logo-img" src="./assets/img/icons/logo-wt.png" alt="" height="50px">
             </a>
-            <a class="alistar-redirect" href="./login.html">
-               <div class="alistar-box">
-                    <span class="alistar-span">REPORTAR-SE</span>
-               </div> 
-            </a>
+            <div class="header-right">
+                <div class="user-info" id="userInfo">
+                    <div class="user-dot"></div>
+                    <span>Piloto:</span>
+                    <span id="b_usuario">—</span>
+                </div>
+                <a class="alistar-redirect" href="./login.html" id="alistarRedirect">
+                   <div class="alistar-box">
+                        <span class="alistar-span" id="alistarSpan">REPORTAR-SE</span>
+                   </div> 
+                </a>
+            </div>
         </div>
     </header>
     <main>
@@ -89,7 +96,7 @@
             </div>
         </div>
     </main>
-    <footer>
-    </footer>
+    <script src="./assets/js/pages.js"></script>
+    <script>validarSessao()</script>
 </body>
 </html>
