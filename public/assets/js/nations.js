@@ -5,7 +5,7 @@ function index() {
     
     for (let i = 0; i < nacoes.length; i++) {
         side_menu.innerHTML += `
-            <a class="nation-button" href="./pages/nations/${links[i]}">
+            <a class="nation-button" href="./pages/${links[i]}">
                 <img src="./assets/img/flags/${bandeiras[i]}" height="28px" width="42px">
                 <span class="nation-title">${nacoes[i]}</span>
             </a>
@@ -20,10 +20,16 @@ function pages() {
     
     for (let i = 0; i < nacoes.length; i++) {
         side_menu.innerHTML += `
-            <a class="nation-button" href="../../pages/nations/${links[i]}">
+            <a class="nation-button" href="../../pages/${links[i]}">
                 <img src="../../assets/img/flags/${bandeiras[i]}" height="28px" width="42px">
                 <span class="nation-title">${nacoes[i]}</span>
             </a>
         `;
     }
+}
+
+function backgroundFlags(nacao) {
+    let content = document.getElementById('content');
+
+    content.style.backgroundImage = `url('../../assets/img/flags/${nacao}-flag.png`;
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China - WikiThunder</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/cards.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-redirect">
+                <a href="../../index.html">
+                    <img class="logo-img" src="../../assets/img/icons/logo-wt.png" alt="" height="50px">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="ipt_search" class="search-input" placeholder="Buscar veículo por nome...">
+                <button class="search-btn" onclick="carregarNome()">BUSCAR</button>
+            </div>
+            <div class="header-right">
+                <div class="user-info" id="userInfo">
+                    <div class="user-dot"></div>
+                    <span>Piloto:</span>
+                    <span id="b_usuario">—</span>
+                </div>
+                <a class="alistar-redirect" href="../../register.html" id="alistarRedirect">
+                   <div class="alistar-box">
+                        <span class="alistar-span" id="alistarSpan">ALISTAR-SE</span>
+                   </div>
+                </a>
+            </div>
+        </div>
+        <div class="navigation-bar">
+            <a class="vehicles-redirect" onclick="carregarVeiculos('aviacao', 'china')">
+                <span class="vehicles-span">AVIAÇÃO</span>
+            </a>
+            <a class="vehicles-redirect" onclick="carregarVeiculos('blindados', 'china')">
+                <span class="vehicles-span">BLINDADOS</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="side-menu" id="side_menu"></div>
+            <div class="content" id="content">
+                <div class="cards" id="cards"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/cards.js"></script>
+    <script>carregarVeiculos('aviacao', 'china')</script>
+    <script src="../../assets/js/nations.js"></script>
+    <script>backgroundFlags('china')</script>
+    <script>pages()</script>
+    <script src="../../assets/js/sessao.js"></script>
+    <script>validarSessao()</script>
+</body>
+</html>

@@ -1,14 +1,11 @@
 function cadastrar() {
-  // aguardar();
-  //Recupere o valor da nova input pelo nome do id
-  // Agora vá para o método fetch logo abaixo
   var nomeVar = nome_input.value;
   var emailVar = email_input.value;
   var senhaVar = senha_input.value;
   var confirmacaoSenhaVar = confirmacao_senha_input.value;
   var nacaoVar = nacao_input.value;
   var gameplayVar = gameplay_input.value;
-  // Verificando se há algum campo em branco
+
   if (
     nomeVar == "" ||
     emailVar == "" ||
@@ -25,15 +22,13 @@ function cadastrar() {
   } else {
     setInterval(sumirMensagem, 5000);
   }
-  // Enviando o valor da nova input
+
   fetch("/usuarios/cadastrar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
       nomeServer: nomeVar,
       emailServer: emailVar,
       senhaServer: senhaVar,

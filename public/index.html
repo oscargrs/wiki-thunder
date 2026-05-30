@@ -12,9 +12,15 @@
 <body>
     <header>
         <div class="header-content">
-            <a class="logo-redirect" href="./index.html">
-                <img class="logo-img" src="./assets/img/icons/logo-wt.png" alt="" height="50px">
-            </a>
+            <div class="logo-redirect">
+                <a href="../../index.html">
+                    <img class="logo-img" src="../../assets/img/icons/logo-wt.png" alt="" height="50px">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="ipt_search" class="search-input" placeholder="Buscar veículo por nome...">
+                <button class="search-btn" onclick="carregarNome()">BUSCAR</button>
+            </div>
             <div class="header-right">
                 <div class="user-info" id="userInfo">
                     <div class="user-dot"></div>
@@ -28,21 +34,6 @@
                 </a>
             </div>
         </div>
-        <div class="navigation-bar">
-            <span class="vehicles-title">VEÍCULOS:</span>
-            <a class="vehicles-redirect" href="./pages/classes/aviacao.html">
-                <span class="vehicles-span">AVIAÇÃO</span>
-            </a>
-            <a class="vehicles-redirect" href="./pages/classes/helicopteros.html">
-                <span class="vehicles-span">HELICÓPTEROS</span>
-            </a>
-            <a class="vehicles-redirect" href="./pages/classes/blindados.html">
-                <span class="vehicles-span">BLINDADOS</span>
-            </a>
-            <a class="vehicles-redirect" href="./pages/classes/marinha.html">
-                <span class="vehicles-span">MARINHA</span>
-            </a>
-        </div>
     </header>
     <main>
         <div class="main-content">
@@ -50,11 +41,7 @@
             <div class="content">
                 <div class="search-section">
                     <h1 class="wiki-title">Wiki<span style="color: #c8a84b;">Thunder</span></h1>
-                    <p class="wiki-subtitle">A enciclopédia da comunidade sobre veículos de War Thunder.</p>
-                    <div class="search-bar-wrapper">
-                        <input type="text" id="ipt_search" class="search-input" placeholder="Buscar veículo por nome...">
-                        <button class="search-btn" onclick="carregarNome()">BUSCAR</button>
-                    </div>
+                    <span class="wiki-subtitle">A enciclopédia da comunidade sobre veículos de War Thunder.</span>
                 </div>
                 <div class="cards" id="cards">
                     <div class="about-section">
@@ -109,13 +96,11 @@
             </div>
         </div>
     </main>
-    <footer>
-        <!--blaoavawfadfwpoi-->
-    </footer>
+    
     <script src="./assets/js/cards.js"></script>
     <script src="./assets/js/nations.js"></script>
     <script>index()</script>
-    <script src="./assets/js/pages.js"></script>
+    <script src="./assets/js/sessao.js"></script>
     <script>validarSessao()</script>
 </body>
 </html>
