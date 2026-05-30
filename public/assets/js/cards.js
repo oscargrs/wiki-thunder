@@ -12,7 +12,8 @@ function exibirVeiculos(veiculos) {
 
         let paisF = pais.charAt(0).toUpperCase() + pais.slice(1);
         let tipoF = tipo.charAt(0).toUpperCase() + tipo.slice(1).replaceAll('_', ' ');
-        let identifierF = formatarIdentifier(identifier).charAt(0).toUpperCase() + identifier.slice(1);;
+        let identifierSemPrefixo = formatarIdentifier(identifier);
+        let identifierF = identifierSemPrefixo.charAt(0).toUpperCase() + identifierSemPrefixo.slice(1).replaceAll('_', '-');
         
         cards.innerHTML += `
             <div class="vehicle-card">
@@ -37,7 +38,7 @@ var prefixoNacoes = ['ussr', 'usa', 'germ', 'uk', 'jp', 'cn', 'it', 'fr', 'sw', 
 function formatarIdentifier(identifier) {
     for (var i = 0; i < prefixoNacoes.length; i++) {
         var prefixo = prefixoNacoes[i];
-        if (identifier.startsWith(prefixo + '-')) {
+        if (identifier.startsWith(prefixo + '_')) {
             return identifier.slice(prefixo.length + 1);
         }
         if (identifier.endsWith('-' + prefixo)) {
@@ -87,7 +88,7 @@ async function carregarClasse(classe) {
 }
 
 async function carregarNome() {
-    var nome = ipt_search.value;
+    var nome = ipt_search.value.replaceAll('-', '_').toLowerCase();
 
     var resposta = await fetch(
         `/vehicles/name/${nome}`
