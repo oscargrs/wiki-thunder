@@ -127,3 +127,97 @@ body {
     color: #7d9048;
     text-transform: uppercase;
 }
+
+/* CURTIDAS --------------- */
+
+.kpis-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.veiculosEncontrados {
+    display: flex;
+    flex-direction: column;
+
+    flex: 2;
+
+    height: 100%;
+    background-color: #141710;
+    border: 1px solid #2e3424;
+
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.likes-list {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    gap: 10px;
+}
+
+.like-row {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #141710;
+    border: 1px solid #2e3424;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+    gap: 20px;
+}
+
+.like-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    flex: 1;
+    min-width: 0;
+
+    color: white;
+}
+
+.like-info span {
+    white-space: nowrap;
+}
+
+.like-btn {
+    min-width: 120px;
+    height: 40px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #d62828;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.like-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+
+    .kpis-row {
+        flex-direction: column;
+    }
+
+    .likes-list {
+        width: 100%;
+    }
+}

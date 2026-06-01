@@ -18,7 +18,7 @@ function autenticar(req, res) {
                     if (resultadoAutenticar.length == 1) {
                         // Enviamos apenas os dados do usuário
                         res.json({
-                            id: resultadoAutenticar[0].id,
+                            id: resultadoAutenticar[0].idUser,
                             email: resultadoAutenticar[0].email,
                             nome: resultadoAutenticar[0].nickname,
                             nacao: resultadoAutenticar[0].nacao,

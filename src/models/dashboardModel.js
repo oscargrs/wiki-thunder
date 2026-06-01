@@ -40,9 +40,9 @@ function getStats() {
 function getTopVehicles() {
     console.log("ACESSEI O DASHBOARD MODEL\nfunction getTopVehicles()");
     var instrucaoSql = `
-        SELECT v.identifier, COUNT(f.idFavorite) AS total
+        SELECT v.identifier, COUNT(f.idLike) AS total
         FROM vehicles v
-        INNER JOIN favorites f ON f.idVehicle = v.idVehicle
+        INNER JOIN likes f ON f.idVehicle = v.idVehicle
         GROUP BY v.idVehicle, v.identifier
         ORDER BY total DESC
         LIMIT 10;
@@ -51,12 +51,12 @@ function getTopVehicles() {
     return database.executar(instrucaoSql);
 }
 
-function getFavoritesByNation() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getFavoritesByNation()");
+function getLikesByNation() {
+    console.log("ACESSEI O DASHBOARD MODEL\nfunction getLikesByNation()");
     var instrucaoSql = `
-        SELECT v.country, COUNT(f.idFavorite) AS total
+        SELECT v.country, COUNT(f.idLike) AS total
         FROM vehicles v
-        INNER JOIN favorites f ON f.idVehicle = v.idVehicle
+        INNER JOIN likes f ON f.idVehicle = v.idVehicle
         GROUP BY v.country
         ORDER BY total DESC;
     `;
@@ -64,12 +64,12 @@ function getFavoritesByNation() {
     return database.executar(instrucaoSql);
 }
 
-function getFavoritesByType() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getFavoritesByType()");
+function getLikesByType() {
+    console.log("ACESSEI O DASHBOARD MODEL\nfunction getLikesByType()");
     var instrucaoSql = `
-        SELECT v.vehicle_type, COUNT(f.idFavorite) AS total
+        SELECT v.vehicle_type, COUNT(f.idLike) AS total
         FROM vehicles v
-        INNER JOIN favorites f ON f.idVehicle = v.idVehicle
+        INNER JOIN likes f ON f.idVehicle = v.idVehicle
         GROUP BY v.vehicle_type
         ORDER BY total DESC;
     `;
@@ -93,7 +93,7 @@ function getNationPreference() {
 module.exports = {
     getStats,
     getTopVehicles,
-    getFavoritesByNation,
-    getFavoritesByType,
+    getLikesByNation,
+    getLikesByType,
     getNationPreference
 };

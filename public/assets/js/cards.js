@@ -1,5 +1,6 @@
 function exibirVeiculos(veiculos) {
     var cards = document.getElementById('cards');
+    var likesList = document.getElementById('likesList');
 
     cards.innerHTML = ``;
 
@@ -29,7 +30,28 @@ function exibirVeiculos(veiculos) {
                     <span class="br">${veiculo.realistic_br}</span>
                 </div>
             </div>
-        `
+        `;
+
+        if (likesList) {
+            likesList.innerHTML += `
+                <div class="like-row">
+    
+                    <div class="like-info">
+                        <span>${identifierF}</span>
+                        <span>${paisF}</span>
+                        <span>${veiculo.realistic_br}</span>
+                        <span>${tipoF}</span>
+                    </div>
+    
+                    <button 
+                        class="like-btn"
+                        onclick="curtir(${veiculo.idVehicle})">
+                        Curtir
+                    </button>
+    
+                </div>
+            `;
+        }
     })
 }
 
@@ -66,20 +88,6 @@ async function carregarNome() {
 
     var resposta = await fetch(
         `/vehicles/search/${nome}`
-    );
-
-    var veiculos = await resposta.json();
-
-    console.log(veiculos);
-
-    exibirVeiculos(veiculos);
-}
-
-async function carregarNomeNacao(nacao) {
-    var nome = ipt_search.value.replaceAll('-', '_').toLowerCase();
-
-    var resposta = await fetch(
-        `/vehicles/search/${nome}/${nacao}`
     );
 
     var veiculos = await resposta.json();

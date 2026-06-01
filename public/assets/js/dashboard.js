@@ -28,8 +28,8 @@ function carregarDashboard() {
                     preencherKPIs(resposta.stats);
                     plotarTopVeiculos(resposta.topVehicles);
                     plotarNacaoPreferida(resposta.nationPreference);
-                    plotarFavoritosPorNacao(resposta.favoritesByNation);
-                    plotarFavoritosPorEspecializacao(resposta.favoritesByType);
+                    plotarCurtidasPorNacao(resposta.likesByNation);
+                    plotarCurtidasPorEspecializacao(resposta.likesByType);
                 });
             } else {
                 console.error("Erro ao buscar dados do dashboard");
@@ -72,7 +72,7 @@ function plotarTopVeiculos(topVehicles) {
             labels: labels,
             datasets: [
                 {
-                    label: "Favoritos",
+                    label: "Curtidas",
                     data: dados,
                     backgroundColor: cores,
                     borderWidth: 0,
@@ -123,23 +123,23 @@ function plotarNacaoPreferida(nationPreference) {
     });
 }
 
-function plotarFavoritosPorNacao(favoritesByNation) {
+function plotarCurtidasPorNacao(likesByNation) {
     var labels = [],
         dados = [],
         cores = [];
-    for (var i = 0; i < favoritesByNation.length; i++) {
-        var nacao = favoritesByNation[i].country;
+    for (var i = 0; i < likesByNation.length; i++) {
+        var nacao = likesByNation[i].country;
         labels.push(nacao);
-        dados.push(favoritesByNation[i].total);
+        dados.push(likesByNation[i].total);
         cores.push(coresNacoes[nacao ? nacao.toLowerCase() : ""] || "#888");
     }
-    new Chart(document.getElementById("canvasFavoritosPorNacao"), {
+    new Chart(document.getElementById("canvasCurtidasPorNacao"), {
         type: "bar",
         data: {
             labels: labels,
             datasets: [
                 {
-                    label: "Favoritos",
+                    label: "Curtidas",
                     data: dados,
                     backgroundColor: cores,
                     borderWidth: 0,
@@ -157,23 +157,23 @@ function plotarFavoritosPorNacao(favoritesByNation) {
     });
 }
 
-function plotarFavoritosPorEspecializacao(favoritesByType) {
+function plotarCurtidasPorEspecializacao(likesByType) {
     var labels = [],
         dados = [],
         cores = [];
-    for (var i = 0; i < favoritesByType.length; i++) {
-        var tipo = favoritesByType[i].vehicle_type;
+    for (var i = 0; i < likesByType.length; i++) {
+        var tipo = likesByType[i].vehicle_type;
         labels.push(tipo);
-        dados.push(favoritesByType[i].total);
+        dados.push(likesByType[i].total);
         cores.push(coresEspecializacao[tipo] || "#888");
     }
-    new Chart(document.getElementById("canvasFavoritosPorEspecializacao"), {
+    new Chart(document.getElementById("canvasCurtidasPorEspecializacao"), {
         type: "bar",
         data: {
             labels: labels,
             datasets: [
                 {
-                    label: "Favoritos",
+                    label: "Curtidas",
                     data: dados,
                     backgroundColor: cores,
                     borderWidth: 0,

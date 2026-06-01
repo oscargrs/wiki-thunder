@@ -18,17 +18,17 @@ function getStats(req, res) {
           );
 
           dashboardModel
-            .getFavoritesByNation()
+            .getLikesByNation()
             .then(function (resultadoByNation) {
               console.log(
-                `\nFavoritos por nação: ${JSON.stringify(resultadoByNation)}`,
+                `\nLikes por nação: ${JSON.stringify(resultadoByNation)}`,
               );
 
               dashboardModel
-                .getFavoritesByType()
+                .getLikesByType()
                 .then(function (resultadoByType) {
                   console.log(
-                    `\nFavoritos por tipo: ${JSON.stringify(resultadoByType)}`,
+                    `\nLikes por tipo: ${JSON.stringify(resultadoByType)}`,
                   );
 
                   dashboardModel
@@ -41,8 +41,8 @@ function getStats(req, res) {
                       res.json({
                         stats: resultadoStats[0],
                         topVehicles: resultadoTopVehicles,
-                        favoritesByNation: resultadoByNation,
-                        favoritesByType: resultadoByType,
+                        likesByNation: resultadoByNation,
+                        likesByType: resultadoByType,
                         nationPreference: resultadoNationPref,
                       });
                     })
@@ -55,12 +55,12 @@ function getStats(req, res) {
                     });
                 })
                 .catch(function (erro) {
-                  console.log("\nErro em getFavoritesByType:", erro.sqlMessage);
+                  console.log("\nErro em getLikesByType:", erro.sqlMessage);
                   res.status(500).json(erro.sqlMessage);
                 });
             })
             .catch(function (erro) {
-              console.log("\nErro em getFavoritesByNation:", erro.sqlMessage);
+              console.log("\nErro em getLikesByNation:", erro.sqlMessage);
               res.status(500).json(erro.sqlMessage);
             });
         })

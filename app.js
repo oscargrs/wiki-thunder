@@ -19,6 +19,7 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var vehiclesRouter = require("./src/routes/vehicles");
 var dashboardRouter = require("./src/routes/dashboard");
+var curtidasRouter = require("./src/routes/curtidas");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +32,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/vehicles", vehiclesRouter);
 app.use("/dashboard", dashboardRouter);
+app.use("/curtidas", curtidasRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
