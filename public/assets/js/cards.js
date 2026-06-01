@@ -85,10 +85,15 @@ async function carregarVeiculos(classe, nacao) {
 
 async function carregarNome() {
     var nome = ipt_search.value.replaceAll('-', '_').replaceAll(' ', '_').toLowerCase();
+    var veiculosEncontrados = document.getElementById('veiculosEncontrados');
 
     var resposta = await fetch(
         `/vehicles/search/${nome}`
     );
+
+    if (veiculosEncontrados) {
+        veiculosEncontrados.style.display = 'block';
+    }
 
     var veiculos = await resposta.json();
 

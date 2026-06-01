@@ -14,23 +14,24 @@ create table users (
 
 create table vehicles (
     idVehicle int auto_increment,
-    identifier varchar(100) not null unique,
+    identifier varchar(100),
     country varchar(50),
     vehicle_type varchar(50),
     realistic_br decimal(4,1),
+    era int,
     constraint pk_vehicles primary key (idVehicle)
 );
 
-create table favorites (
-    idFavorite int auto_increment,
+create table likes (
+    idLike int auto_increment,
     idUser int not null,
     idVehicle int not null,
     addition_time timestamp,
-    constraint pk_Favorites primary key (idFavorite),
-    constraint fk_Favorites_User foreign key (idUser) references users(idUser),
-    constraint fk_Favorites_vehicles foreign key (idVehicle) references vehicles(idVehicle)
+    constraint pk_Likes primary key (idLike),
+    constraint fk_Likes_User foreign key (idUser) references users(idUser),
+    constraint fk_Likes_vehicles foreign key (idVehicle) references vehicles(idVehicle)
 );
 
 select * from users;
 select * from vehicles;
-select * from favorites;
+select * from likes;

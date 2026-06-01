@@ -1,13 +1,3 @@
-create table vehicles (
-    idVehicle    int          auto_increment,
-    identifier   varchar(100),
-    country      varchar(50),
-    vehicle_type varchar(50),
-    realistic_br  decimal(4,1),
-    era          int,
-    constraint pk_vehicles primary key (idVehicle)
-);
-
 insert into vehicles (identifier, country, vehicle_type, realistic_br, era) values ('a-20g', 'usa', 'assault', 2.7, 2);
 insert into vehicles (identifier, country, vehicle_type, realistic_br, era) values ('a-26b', 'usa', 'assault', 5.3, 4);
 insert into vehicles (identifier, country, vehicle_type, realistic_br, era) values ('a-26b-10', 'usa', 'assault', 5, 4);
