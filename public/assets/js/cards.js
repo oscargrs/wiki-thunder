@@ -53,7 +53,7 @@ function exibirVeiculos(veiculos) {
                     <span class="country">${paisF}</span>
                 </div>
                 <div class="card-img">
-                    <img class="vehicle-img" src="../../assets/img/vehicles/${identifier}.png" alt="${identifierF}">
+                    <img class="vehicle-img" src="../../assets/img/vehicles/${identifier}.png" alt="${identifierF}" onclick="expandirImagem('../../assets/img/vehicles/${identifier}.png', '${identifierF}')">
                 </div>
                 <div class="card-footer">
                     <span class="type">${tipoF}</span>
@@ -141,4 +141,19 @@ async function carregarNomeNacao(nacao) {
     console.log(veiculos);
 
     exibirVeiculos(veiculos);
+}
+
+function expandirImagem(src, alt) {
+    var overlay = document.createElement('div');
+    overlay.className = 'img-overlay';
+    overlay.onclick = function() {
+        document.body.removeChild(overlay);
+    };
+
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
 }

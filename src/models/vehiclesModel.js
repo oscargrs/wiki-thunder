@@ -19,7 +19,7 @@ function buscarVeiculos(classe, nacao) {
     var tipos = classes[classe];
     var tiposSQL = tipos.map(tipo => `'${tipo}'`).join(',');
     
-    var instrucaoSql = `SELECT * FROM vehicles WHERE country = '${nacao}' AND vehicle_type IN (${tiposSQL}) ORDER BY realistic_br;`
+    var instrucaoSql = `SELECT * FROM vehicles WHERE country = '${nacao}' AND vehicle_type IN (${tiposSQL}) ORDER BY realistic_br DESC;`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

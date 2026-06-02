@@ -16,9 +16,55 @@ function cadastrar() {
   ) {
     cardErro.style.display = "block";
     mensagem_erro.innerHTML =
-      "(Mensagem de erro para todos os campos em branco)";
+      "Preencha todos os campos corretamente.";
     finalizarAguardar();
     return false;
+  } else {
+    setInterval(sumirMensagem, 5000);
+  }
+
+  if (senhaVar.length < 8) {
+    cardErro.style.display = 'block';
+    mensagem_erro.innerHTML =
+      "A senha deve ter no mínimo 8 caracteres.";
+    finalizarAguardar();
+    return false;
+  } else {
+    setInterval(sumirMensagem, 5000);
+  }
+
+  if (!emailVar.includes('@') || !emailVar.includes('.')) {
+      cardErro.style.display = 'block';
+      mensagem_erro.innerHTML = "Digite um e-mail válido.";
+      finalizarAguardar();
+      return false;
+  } else {
+      setInterval(sumirMensagem, 5000);
+  }
+
+  let numero = false;
+  for (let i = 0; i < senhaVar.length; i++) {
+    if (
+        senhaVar[i] == 0 ||
+        senhaVar[i] == 1 ||
+        senhaVar[i] == 2 ||
+        senhaVar[i] == 3 ||
+        senhaVar[i] == 4 ||
+        senhaVar[i] == 5 ||
+        senhaVar[i] == 6 ||
+        senhaVar[i] == 7 ||
+        senhaVar[i] == 8 ||
+        senhaVar[i] == 9
+    ) {
+        numero = true;
+    }
+  }
+
+  if (!numero) {
+      cardErro.style.display = 'block';
+      mensagem_erro.innerHTML = "A senha deve conter ao menos um número.";
+      finalizarAguardar();
+      return false;
   } else {
     setInterval(sumirMensagem, 5000);
   }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/hangar.css">
     <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/cards.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -69,8 +70,16 @@
             <div class="graficos-row-top">
                 <div class="grafico-panel grafico-wide" id="topCurtidos">
                     <h3 class="grafico-titulo">TOP VEÍCULOS MAIS CURTIDOS</h3>
-                    <div class="grafico-wrapper">
-                        <canvas id="canvasTopVeiculos"></canvas>
+                    <div class="top-curtidos-inner">
+                        <div class="grafico-wrapper">
+                            <canvas id="canvasTopVeiculos"></canvas>
+                        </div>
+                        <div class="mais-curtido-destaque">
+                            <span class="kpi-label">Mais curtido</span>
+                            <div id="maisCurtidoCard">
+                                <div class="cards" id="cards"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="grafico-panel grafico-narrow" id="nacoesMaisPreferidas">
@@ -98,6 +107,7 @@
         </div>
     </main>
     <script src="../assets/js/hangar.js"></script>
+    <script src="../assets/js/cards.js"></script>
     <script src="../assets/js/sessao.js"></script>
     <script>validarSessaoHangar();</script>
 </body>

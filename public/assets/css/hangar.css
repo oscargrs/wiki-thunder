@@ -246,3 +246,22 @@ body {
     outline: none;
     border-color: #7d9048;
 }
+
+.top-curtidos-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.top-curtidos-inner .grafico-wrapper {
+    flex: 1;
+}
+
+.mais-curtido-destaque {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

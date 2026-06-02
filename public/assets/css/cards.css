@@ -97,3 +97,22 @@
     font-size: 15px;
     color: #8a8a6a;
 }
+
+.card-img {
+    cursor: pointer;
+}
+
+.img-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.img-overlay img {
+    width: 50vw;
+    height: 50vh;
+}

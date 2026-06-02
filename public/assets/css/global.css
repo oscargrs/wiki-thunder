@@ -32,3 +32,22 @@ a {
 .content::-webkit-scrollbar-thumb:hover {
     background: #7d9048; 
 }
+
+.alerta_erro {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 40px;
+}
+
+.card_erro {
+    display: none;
+    background-color: #1a1e14;
+    border: 1px solid #d04030;
+    border-left: 4px solid #d04030;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
