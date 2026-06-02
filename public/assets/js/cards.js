@@ -1,58 +1,85 @@
+var traducaoPaises = {
+    'usa': 'EUA',
+    'france': 'França',
+    'japan': 'Japão',
+    'china': 'China',
+    'ussr': 'URSS',
+    'israel': 'Israel',
+    'germany': 'Alemanha',
+    'italy': 'Itália',
+    'sweden': 'Suécia',
+    'britain': 'Grã-Bretanha'
+};
+
+var traducaoTipos = {
+    'assault': 'Assalto',
+    'bomber': 'Bombardeiro',
+    'fighter': 'Caça',
+    'medium_tank': 'Tanque Médio',
+    'spaa': 'AAAP',
+    'light_tank': 'Tanque Leve',
+    'tank_destroyer': 'Caça-Tanque',
+    'heavy_tank': 'Tanque Pesado'
+};
+
 function exibirVeiculos(veiculos) {
     var cards = document.getElementById('cards');
-    var likesList = document.getElementById('likesList');
+    var veiculosEncontrados = document.getElementById('veiculosEncontrados');
 
     cards.innerHTML = ``;
 
-    veiculos.forEach(veiculo => {
-        console.log(veiculo.identifier);
+    for (var i = 0; i < veiculos.length; i++) {
+        var veiculo = veiculos[i];
 
-        let pais = veiculo.country.toUpperCase();
-        let tipo = veiculo.vehicle_type;
-        let identifier = veiculo.identifier;
+        var identifier = veiculo.identifier;
 
-        let paisF = pais.charAt(0) + pais.slice(1);
-        let tipoF = tipo.charAt(0).toUpperCase() + tipo.slice(1).replaceAll('_', ' ');
-        let identifierSemPrefixo = formatarIdentifier(identifier);
-        let identifierF = identifierSemPrefixo.charAt(0).toUpperCase() + identifierSemPrefixo.slice(1).replaceAll('_', ' ');
-        
+        var paisF = traducaoPaises[veiculo.country];
+        if (!paisF) {
+            paisF = veiculo.country;
+        }
+
+        var tipoF = traducaoTipos[veiculo.vehicle_type];
+        if (!tipoF) {
+            tipoF = veiculo.vehicle_type;
+        }
+
+        var identifierSemPrefixo = formatarIdentifier(identifier);
+        var identifierF = identifierSemPrefixo.charAt(0).toUpperCase() + identifierSemPrefixo.slice(1).replaceAll('_', ' ');
+
         cards.innerHTML += `
             <div class="vehicle-card">
                 <div class="card-title">
-                    <span class="identifier">${identifierF}</span>
+                    <span class="identifier" title="${identifierF}">${identifierF}</span>
                     <span class="country">${paisF}</span>
                 </div>
                 <div class="card-img">
-                    <img class="vehicle-img" src="../../assets/img/vehicles/${identifier}.png" alt="">
+                    <img class="vehicle-img" src="../../assets/img/vehicles/${identifier}.png" alt="${identifierF}">
                 </div>
                 <div class="card-footer">
                     <span class="type">${tipoF}</span>
                     <span class="br">${veiculo.realistic_br}</span>
                 </div>
+                <button
+                    class="card-curtir"
+                    id="btn-curtir-${veiculo.idVehicle}"
+                    onclick="curtirCard(${veiculo.idVehicle}, this)">
+                    ♥ Curtir
+                </button>
             </div>
         `;
+    }
 
-        if (likesList) {
-            likesList.innerHTML += `
-                <div class="like-row">
-    
-                    <div class="like-info">
-                        <span>${identifierF}</span>
-                        <span>${paisF}</span>
-                        <span>${veiculo.realistic_br}</span>
-                        <span>${tipoF}</span>
-                    </div>
-    
-                    <button 
-                        class="like-btn"
-                        onclick="curtir(${veiculo.idVehicle})">
-                        Curtir
-                    </button>
-    
-                </div>
-            `;
+    if (window.location.pathname != '/hangar/curtidas.html') {
+        var botoes = document.querySelectorAll('.card-curtir');
+
+        for (var i = 0; i < botoes.length; i++) {
+            botoes[i].style.display = 'none';
         }
-    })
+    }
+
+    if (veiculosEncontrados) {
+        veiculosEncontrados.style.display = 'block';
+    }
 }
 
 var prefixoNacoes = ['ussr', 'usa', 'germ', 'uk', 'jp', 'cn', 'it', 'fr', 'sw', 'il'];
@@ -94,6 +121,20 @@ async function carregarNome() {
     if (veiculosEncontrados) {
         veiculosEncontrados.style.display = 'block';
     }
+
+    var veiculos = await resposta.json();
+
+    console.log(veiculos);
+
+    exibirVeiculos(veiculos);
+}
+
+async function carregarNomeNacao(nacao) {
+    var nome = ipt_search.value.replaceAll('-', '_').replaceAll(' ', '_').toLowerCase();
+
+    var resposta = await fetch(
+        `/vehicles/search/${nome}/${nacao}`
+    );
 
     var veiculos = await resposta.json();
 

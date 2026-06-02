@@ -1,37 +1,37 @@
-var dashboardModel = require("../models/dashboardModel");
+var hangarModel = require("../models/hangarModel");
 
 function getStats(req, res) {
-  console.log("ACESSEI O DASHBOARD CONTROLLER\nfunction getStats()");
+  console.log("ACESSEI O HANGAR CONTROLLER\nfunction getStats()");
 
-  dashboardModel
+  hangarModel
     .getStats()
     .then(function (resultadoStats) {
       console.log(
         `\nResultados encontrados: ${JSON.stringify(resultadoStats)}`,
       );
 
-      dashboardModel
+      hangarModel
         .getTopVehicles()
         .then(function (resultadoTopVehicles) {
           console.log(
             `\nTop veículos: ${JSON.stringify(resultadoTopVehicles)}`,
           );
 
-          dashboardModel
+          hangarModel
             .getLikesByNation()
             .then(function (resultadoByNation) {
               console.log(
                 `\nLikes por nação: ${JSON.stringify(resultadoByNation)}`,
               );
 
-              dashboardModel
+              hangarModel
                 .getLikesByType()
                 .then(function (resultadoByType) {
                   console.log(
                     `\nLikes por tipo: ${JSON.stringify(resultadoByType)}`,
                   );
 
-                  dashboardModel
+                  hangarModel
                     .getNationPreference()
                     .then(function (resultadoNationPref) {
                       console.log(

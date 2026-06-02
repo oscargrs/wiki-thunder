@@ -204,7 +204,7 @@ function makeDonutDataset(labels, data) {
 }
 
 // ─── RENDER ───────────────────────────────────────────────
-function renderDash() {
+function renderHangar() {
 
     // STAT CARDS
     document.getElementById("stat-total-users").innerHTML    = mockTotalUsers;
@@ -260,9 +260,9 @@ function renderDash() {
 
 }
 
-// Inicializando o dashboard ao carregar a página
+// Inicializando o hangar ao carregar a página
 document.addEventListener("DOMContentLoaded", function() {
     validarSessao();
     carregarMenu();
-    renderDash();
+    renderHangar();
 });

@@ -2,9 +2,9 @@ body {
     overflow-y: scroll;
 }
 
-/* DASHBOARD ----------------------------- */
+/* HANGAR ----------------------------- */
 
-.dashboard-content {
+.hangar-content {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -220,4 +220,29 @@ body {
     .likes-list {
         width: 100%;
     }
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    background-color: #141710;
+    color: white;
+    border: 1px solid #2e3424;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 160px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #7d9048;
 }

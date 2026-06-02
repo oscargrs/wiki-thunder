@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
 function getStats() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getStats()");
+    console.log("ACESSEI O HANGAR MODEL\nfunction getStats()");
     var instrucaoSql = `
         SELECT
             (SELECT COUNT(*) FROM users) AS total_users,
@@ -38,7 +38,7 @@ function getStats() {
 }
 
 function getTopVehicles() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getTopVehicles()");
+    console.log("ACESSEI O HANGAR MODEL\nfunction getTopVehicles()");
     var instrucaoSql = `
         SELECT v.identifier, COUNT(f.idLike) AS total
         FROM vehicles v
@@ -52,7 +52,7 @@ function getTopVehicles() {
 }
 
 function getLikesByNation() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getLikesByNation()");
+    console.log("ACESSEI O HANGAR MODEL\nfunction getLikesByNation()");
     var instrucaoSql = `
         SELECT v.country, COUNT(f.idLike) AS total
         FROM vehicles v
@@ -65,7 +65,7 @@ function getLikesByNation() {
 }
 
 function getLikesByType() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getLikesByType()");
+    console.log("ACESSEI O HANGAR MODEL\nfunction getLikesByType()");
     var instrucaoSql = `
         SELECT v.vehicle_type, COUNT(f.idLike) AS total
         FROM vehicles v
@@ -78,7 +78,7 @@ function getLikesByType() {
 }
 
 function getNationPreference() {
-    console.log("ACESSEI O DASHBOARD MODEL\nfunction getNationPreference()");
+    console.log("ACESSEI O HANGAR MODEL\nfunction getNationPreference()");
     var instrucaoSql = `
         SELECT main_nation AS nation, COUNT(*) AS total
         FROM users

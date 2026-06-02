@@ -1,4 +1,4 @@
-function validarSessaoDash() {
+function validarSessaoHangar() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
 
@@ -21,8 +21,8 @@ function validarSessao() {
     var userInfo = document.getElementById("userInfo");
 
     if (email != null && nome != null) {
-        alistarSpan.innerHTML = "DASHBOARD";
-        alistarRedirect.href = "../../dashboard/dash-visao-geral.html";
+        alistarSpan.innerHTML = "HANGAR";
+        alistarRedirect.href = "../../hangar/hangar.html";
         b_usuario.innerHTML = nome;
     } else {
         userInfo.style.display = "none";

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curtidas - WikiThunder</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/hangar.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/cards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a class="logo-redirect" href="../index.html">
+                <img class="logo-img" src="../assets/img/icons/logo-wt.png" alt="" height="50px">
+            </a>
+            <div class="title-page">
+                <span class="title-span" id="titleSpan">Curtidas</span>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-dot"></div>
+                    <span>Piloto:</span>
+                    <span id="b_usuario">—</span>
+                </div>
+                <a class="alistar-redirect" href="../login.html" id="alistarRedirect" onclick="limparSessao()">
+                    <div class="alistar-box">
+                        <span class="alistar-span" id="alistarSpan">Sair</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="navigation-bar">
+            <a class="vehicles-redirect" href="./hangar.html">
+                <span class="vehicles-span">HANGAR</span>
+            </a>
+        </div>
+    </header>
+
+<main>
+    <div class="hangar-content">
+        <div class="stats-section">
+            <span class="stats-title">Curtir veículos</span>
+            <div class="filter-bar">
+                <select id="sel_nacao" class="filter-select">
+                    <option>Selecione uma nação</option>
+                    <option value="usa">EUA</option>
+                    <option value="ussr">URSS</option>
+                    <option value="germany">Alemanha</option>
+                    <option value="britain">Grã-Bretanha</option>
+                    <option value="japan">Japão</option>
+                    <option value="china">China</option>
+                    <option value="italy">Itália</option>
+                    <option value="france">França</option>
+                    <option value="sweden">Suécia</option>
+                    <option value="israel">Israel</option>
+                </select>
+
+                <select id="sel_classe" class="filter-select">
+                    <option>Selecione uma classe</option>
+                    <option value="aviacao">Aviação</option>
+                    <option value="blindados">Blindados</option>
+                </select>
+
+                <button class="search-btn" onclick="carregarFiltro()">FILTRAR</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="ipt_search" class="search-input" placeholder="Buscar veículo...">
+                <button class="search-btn" onclick="carregarNome()">BUSCAR</button>
+            </div>
+            <div id="veiculosEncontrados" style="display: none; margin-top: 16px;">
+                <div class="cards" id="cards"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="../assets/js/curtidas.js"></script>
+    <script src="../assets/js/hangar.js"></script>
+    <script src="../assets/js/sessao.js"></script>
+    <script>validarSessaoHangar();</script>
+    <script src="../assets/js/cards.js"></script>
+</body>
+</html>

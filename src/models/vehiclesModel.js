@@ -26,14 +26,14 @@ function buscarVeiculos(classe, nacao) {
 }
 
 function buscarPorNome(nome) {
-    var instrucaoSql = `SELECT * FROM vehicles WHERE identifier LIKE '%${nome}%';`
+    var instrucaoSql = `SELECT * FROM vehicles WHERE identifier LIKE '%${nome}%' ORDER BY realistic_br;`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
 function buscarPorNomeNacao(nome, nacao) {
-    var instrucaoSql = `SELECT * FROM vehicles WHERE identifier LIKE '%${nome}%' AND country = '${nacao}';`
+    var instrucaoSql = `SELECT * FROM vehicles WHERE identifier LIKE '%${nome}%' AND country = '${nacao}' ORDER BY realistic_br;`
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
