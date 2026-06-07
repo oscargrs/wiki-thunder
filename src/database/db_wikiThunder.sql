@@ -18,7 +18,6 @@ create table vehicles (
     country varchar(50),
     vehicle_type varchar(50),
     realistic_br decimal(4,1),
-    era int,
     constraint pk_vehicles primary key (idVehicle)
 );
 
